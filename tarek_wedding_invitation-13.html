@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#11100e">
+<title>دعوة زفاف طارق</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap');
+
+:root{
+  --bg:#0f0e0c;
+  --bg2:#171511;
+  --gold:#d8b36a;
+  --gold2:#f2d79a;
+  --cream:#f7f0df;
+  --muted:#cfc3aa;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--cream);
+  font-family:"Cairo",sans-serif;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";
+  position:fixed;inset:0;pointer-events:none;z-index:20;
+  background:radial-gradient(circle at 50% 10%,rgba(216,179,106,.08),transparent 35%);
+}
+.hero{
+  min-height:100svh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:35px 20px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 42%,rgba(216,179,106,.13),transparent 28%),
+    linear-gradient(145deg,#0b0a09,#181511 50%,#0b0a09);
+}
+.hero:after{
+  content:"";
+  position:absolute;inset:18px;
+  border:1px solid rgba(216,179,106,.35);
+  border-radius:22px;
+}
+.ornament{
+  position:absolute;width:260px;height:260px;
+  border:1px solid rgba(216,179,106,.22);
+  transform:rotate(45deg);
+}
+.ornament.one{top:-130px;right:-130px}
+.ornament.two{bottom:-130px;left:-130px}
+.hero-content{position:relative;z-index:2;max-width:700px}
+.small{
+  color:var(--gold2);font-size:.9rem;letter-spacing:4px;
+  margin-bottom:22px;
+}
+.bismillah{
+  font-family:"Amiri",serif;font-size:1.45rem;color:var(--gold2);
+  margin-bottom:24px;
+}
+h1{
+  font-family:"Amiri",serif;
+  font-size:clamp(4rem,18vw,8rem);
+  line-height:.9;
+  font-weight:700;
+  color:var(--gold2);
+  text-shadow:0 0 35px rgba(216,179,106,.18);
+}
+.divider{
+  display:flex;align-items:center;gap:12px;justify-content:center;
+  margin:28px auto;
+}
+.divider span{width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.divider span:last-child{background:linear-gradient(90deg,var(--gold),transparent)}
+.diamond{width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+.subtitle{font-size:1.15rem;color:var(--cream);line-height:2}
+.date{margin-top:14px;color:var(--muted);font-size:.95rem}
+.open-btn{
+  margin-top:32px;display:inline-block;
+  padding:13px 30px;border:1px solid var(--gold);
+  color:var(--gold2);text-decoration:none;border-radius:50px;
+  transition:.3s;background:rgba(216,179,106,.04);
+}
+.open-btn:hover{background:var(--gold);color:#15120e}
+section{padding:90px 20px}
+.container{max-width:850px;margin:auto;text-align:center}
+.section-title{
+  font-family:"Amiri",serif;color:var(--gold2);
+  font-size:2.2rem;margin-bottom:18px;
+}
+.section-text{color:var(--muted);line-height:2.1;font-size:1rem}
+.info-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px;
+}
+.card{
+  border:1px solid rgba(216,179,106,.2);
+  background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(216,179,106,.025));
+  border-radius:18px;padding:28px 14px;
+}
+.icon{font-size:1.7rem;color:var(--gold2);margin-bottom:10px}
+.card h3{font-size:1rem;color:var(--cream);margin-bottom:6px}
+.card p{font-size:.88rem;color:var(--muted);line-height:1.8}
+.map-btn,.wa-btn{
+  display:inline-block;margin-top:28px;padding:13px 26px;
+  border-radius:50px;text-decoration:none;font-weight:600;
+}
+.map-btn{border:1px solid var(--gold);color:var(--gold2)}
+.wa-btn{background:#b99754;color:#15120e}
+.venue-box{
+  margin:34px auto 0;
+  max-width:650px;
+  padding:24px 18px;
+  border:1px solid rgba(216,179,106,.28);
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(216,179,106,.025));
+}
+.venue-box .venue-icon{font-size:1.8rem;margin-bottom:8px}
+.venue-box h3{font-size:1.05rem;color:var(--gold2);margin-bottom:6px}
+.venue-box p{color:var(--muted);line-height:1.9}
+.quote{
+  padding:70px 25px;
+  background:linear-gradient(90deg,transparent,rgba(216,179,106,.07),transparent);
+}
+.quote p{
+  font-family:"Amiri",serif;font-size:1.65rem;line-height:2;color:var(--gold2)
+}
+footer{
+  padding:40px 20px;text-align:center;
+  border-top:1px solid rgba(216,179,106,.13);
+  color:#9d927e;font-size:.82rem
+}
+.fade{opacity:0;transform:translateY(20px);animation:fade 1s ease forwards}
+.d1{animation-delay:.2s}.d2{animation-delay:.45s}.d3{animation-delay:.7s}
+@keyframes fade{to{opacity:1;transform:none}}
+@media(max-width:650px){
+  .info-grid{grid-template-columns:1fr}
+  section{padding:70px 18px}
+  .hero:after{inset:10px}
+}
+
+.rose{
+  position:fixed;
+  top:-50px;
+  z-index:15;
+  pointer-events:none;
+  font-size:var(--size,22px);
+  opacity:.82;
+  filter:drop-shadow(0 3px 5px rgba(0,0,0,.35));
+  animation:fall var(--duration,8s) linear var(--delay,0s) infinite;
+}
+@keyframes fall{
+  0%{transform:translate3d(0,-60px,0) rotate(0deg);opacity:0}
+  8%{opacity:.85}
+  50%{transform:translate3d(var(--drift,40px),55vh,0) rotate(180deg)}
+  92%{opacity:.8}
+  100%{transform:translate3d(calc(var(--drift,40px) * -1),110vh,0) rotate(360deg);opacity:0}
+}
+@media(max-width:650px){
+  .rose{font-size:calc(var(--size,22px) * .82)}
+}
+
+
+
+
+.invitation-details{
+  padding-top:80px;
+  padding-bottom:80px;
+  background:
+    radial-gradient(circle at 50% 45%,rgba(216,179,106,.09),transparent 42%),
+    #0f0e0c;
+}
+.invitation-card{
+  position:relative;
+  max-width:900px;
+  padding:58px 34px 52px;
+  border:1px solid rgba(216,179,106,.34);
+  border-radius:24px;
+  background:
+    linear-gradient(rgba(247,240,223,.035),rgba(247,240,223,.015)),
+    #14120f;
+  box-shadow:0 20px 70px rgba(0,0,0,.35);
+  overflow:hidden;
+}
+.invitation-card:before,.invitation-card:after{
+  content:"";
+  position:absolute;
+  width:180px;height:180px;
+  border:1px solid rgba(216,179,106,.18);
+  transform:rotate(45deg);
+}
+.invitation-card:before{top:-115px;right:-115px}
+.invitation-card:after{bottom:-115px;left:-115px}
+.bismillah.inner{margin-bottom:25px}
+.verse{
+  font-family:"Amiri",serif;
+  font-size:1.25rem;
+  line-height:2.15;
+  color:var(--cream);
+}
+.verse span{
+  display:block;font-size:1rem;color:var(--muted);margin-top:4px;
+}
+.gold-divider{
+  color:var(--gold2);
+  font-size:1.35rem;
+  letter-spacing:6px;
+  margin:28px auto;
+}
+.blessing{
+  font-family:"Amiri",serif;
+  color:var(--gold2);
+  font-size:2rem;
+  line-height:1.7;
+  text-shadow:0 2px 12px rgba(216,179,106,.12);
+}
+.warm{
+  margin-top:15px;
+  font-size:1.15rem;
+  color:var(--cream);
+}
+.parents{
+  display:grid;
+  grid-template-columns:1fr 90px 1fr;
+  align-items:center;
+  gap:10px;
+  margin:25px auto 5px;
+  max-width:720px;
+}
+.person-name{font-size:1.18rem;color:var(--cream);font-weight:600}
+.person-father{font-size:1rem;color:var(--muted);margin-top:3px}
+.person-role{
+  font-family:"Amiri",serif;
+  font-size:3rem;
+  color:var(--gold2);
+  line-height:1.2;
+  margin-top:7px;
+}
+.center-ornament{
+  color:var(--gold2);
+  font-size:2rem;
+  border-left:1px solid rgba(216,179,106,.35);
+  border-right:1px solid rgba(216,179,106,.35);
+  padding:22px 8px;
+}
+.occasion{
+  font-family:"Amiri",serif;
+  font-size:1.45rem;
+  color:var(--cream);
+  margin-top:5px;
+}
+.date-main,.time-main{
+  color:var(--muted);
+  font-size:1.08rem;
+  margin-top:10px;
+}
+.time-main{color:var(--cream)}
+.confirm{margin-top:30px}
+.confirm .wa-btn{margin-top:0}
+.confirm small{font-size:.78rem;font-weight:500;opacity:.85}
+@media(max-width:650px){
+  .invitation-card{padding:45px 18px 42px}
+  .verse{font-size:1.05rem}
+  .blessing{font-size:1.6rem}
+  .parents{grid-template-columns:1fr 45px 1fr;gap:4px}
+  .person-name{font-size:.95rem}
+  .person-father{font-size:.85rem}
+  .person-role{font-size:2.35rem}
+  .center-ornament{font-size:1.35rem;padding:18px 4px}
+  .occasion{font-size:1.2rem}
+  .date-main,.time-main{font-size:.92rem}
+}
+
+
+
+
+
+/* Clearly visible falling stars */
+.star-layer{
+  position:fixed; inset:0; pointer-events:none; z-index:31;
+  overflow:hidden;
+}
+.star{
+  position:absolute;
+  top:-40px;
+  width:22px;
+  height:22px;
+  color:#f2d79a;
+  opacity:.9;
+  filter:drop-shadow(0 0 6px rgba(242,215,154,.75));
+  animation:starfall linear infinite;
+}
+.star::before{
+  content:"★";
+  display:block;
+  font-size:18px;
+  line-height:22px;
+  text-align:center;
+}
+@keyframes starfall{
+  0%{transform:translate3d(0,-45px,0) rotate(0deg);opacity:0}
+  10%{opacity:.95}
+  30%{transform:translate3d(28px,30vh,0) rotate(90deg)}
+  55%{transform:translate3d(-24px,58vh,0) rotate(180deg)}
+  80%{transform:translate3d(35px,84vh,0) rotate(270deg)}
+  100%{transform:translate3d(-18px,110vh,0) rotate(360deg);opacity:.15}
+}
+
+</style>
+</head>
+<body>
+
+<div aria-hidden="true">
+  <span class="rose" style="left:4%;--size:24px;--duration:8s;--delay:-1s;--drift:55px">🌹</span>
+  <span class="rose" style="left:14%;--size:18px;--duration:10s;--delay:-6s;--drift:-35px">🌹</span>
+  <span class="rose" style="left:27%;--size:22px;--duration:7.5s;--delay:-3s;--drift:45px">🌹</span>
+  <span class="rose" style="left:39%;--size:17px;--duration:11s;--delay:-8s;--drift:-50px">🌹</span>
+  <span class="rose" style="left:52%;--size:23px;--duration:8.8s;--delay:-4s;--drift:35px">🌹</span>
+  <span class="rose" style="left:65%;--size:19px;--duration:9.5s;--delay:-2s;--drift:-45px">🌹</span>
+  <span class="rose" style="left:77%;--size:24px;--duration:7.8s;--delay:-7s;--drift:50px">🌹</span>
+  <span class="rose" style="left:89%;--size:18px;--duration:10.5s;--delay:-5s;--drift:-40px">🌹</span>
+</div>
+
+
+
+<div class="star-layer" aria-hidden="true">
+  <span class="star" style="left:5%;animation-duration:8s;animation-delay:-3s"></span>
+  <span class="star" style="left:14%;animation-duration:11s;animation-delay:-8s;transform:scale(.7)"></span>
+  <span class="star" style="left:23%;animation-duration:9s;animation-delay:-5s;transform:scale(1.15)"></span>
+  <span class="star" style="left:32%;animation-duration:13s;animation-delay:-10s;transform:scale(.75)"></span>
+  <span class="star" style="left:41%;animation-duration:10s;animation-delay:-2s;transform:scale(.9)"></span>
+  <span class="star" style="left:50%;animation-duration:12s;animation-delay:-7s;transform:scale(1.05)"></span>
+  <span class="star" style="left:59%;animation-duration:9.5s;animation-delay:-6s;transform:scale(.7)"></span>
+  <span class="star" style="left:68%;animation-duration:13.5s;animation-delay:-11s;transform:scale(.95)"></span>
+  <span class="star" style="left:77%;animation-duration:10.5s;animation-delay:-4s;transform:scale(.8)"></span>
+  <span class="star" style="left:86%;animation-duration:12.5s;animation-delay:-9s;transform:scale(1.1)"></span>
+  <span class="star" style="left:95%;animation-duration:9.5s;animation-delay:-1s;transform:scale(.75)"></span>
+</div>
+
+<header class="hero">
+  <div class="ornament one"></div>
+  <div class="ornament two"></div>
+
+  <div class="hero-content">
+    <div class="bismillah fade">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <div class="small fade d1">دعوة خاصة</div>
+    <h1 class="fade d2">طارق</h1>
+
+    <div class="divider fade d2">
+      <span></span><i class="diamond"></i><span></span>
+    </div>
+
+    <p class="subtitle fade d3">
+      بكل حب وفرح، ندعوكم لمشاركتنا<br>
+      أجمل لحظات العمر
+    </p>
+    <p class="date fade d3">الخميس الموافق ٨/١٠/٢٠٢٦ — بعد صلاة المغرب</p>
+
+    <a class="open-btn fade d3" href="#details">تفاصيل الدعوة ↓</a>
+  </div>
+</header>
+
+<section id="details" class="invitation-details">
+  <div class="container invitation-card">
+    <div class="bismillah inner">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
+
+    <p class="verse">
+      ﴿وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنْفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا<br>
+      وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ﴾
+      <span>(الروم: 21)</span>
+    </p>
+
+    <div class="gold-divider">❧ ✦ ❧</div>
+
+    <div class="blessing">
+      <div>بَارَكَ اللهُ لَهُمَا وَبَارَكَ عَلَيْهِمَا</div>
+      <div>وَجَمَعَ بَيْنَهُمَا فِي خَيْرٍ</div>
+    </div>
+
+    <p class="warm">بكل مودة وحب يتشرفان</p>
+
+    <div class="parents">
+      <div class="person">
+        <div class="person-name">عماد زوين</div>
+        <div class="person-father">أبو عبدالغني</div>
+        <div class="person-role">طارق</div>
+      </div>
+
+      <div class="center-ornament">✦</div>
+
+      <div class="person">
+        <div class="person-name">الحاج وائل الحسين</div>
+        <div class="person-father">أبو محمد</div>
+        <div class="person-role">كريمته</div>
+      </div>
+    </div>
+
+    <div class="gold-divider">❧ ✦ ❧</div>
+
+    <p class="occasion">لحضور عقد قران ولديهما</p>
+
+    <div class="date-main">وذلك يوم الخميس بتاريخ 2026/10/8</div>
+    <div class="time-main">الساعة 6 ونصف بعد صلاة المغرب</div>
+
+    <div class="venue-box">
+      <div class="venue-icon">📍</div>
+      <h3>موقع الحفل</h3>
+      <p>أمام منزل الحاج وائل الحسين</p>
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=36.432561%2C37.441052" target="_blank" rel="noopener noreferrer">
+        📍 فتح موقع الحفل على الخرائط
+      </a>
+    </div>
+
+    <div class="confirm">
+      <a class="wa-btn" href="https://wa.me/905378193287?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%AA%D8%A3%D9%83%D9%8A%D8%AF%20%D8%AD%D8%B6%D9%88%D8%B1%D9%8A%20%D9%81%D9%8A%20%D8%B9%D9%82%D8%AF%20%D9%82%D8%B1%D8%A7%D9%86%20%D8%B7%D8%A7%D8%B1%D9%82." target="_blank" rel="noopener">
+        تأكيد الحضور عبر واتساب<br>
+        <small dir="ltr">+90 537 819 32 87</small>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="container">
+    <p>
+      «فرحتنا لا تكتمل إلا بوجود من نحب»
+    </p>
+  </div>
+</section>
+
+
+
+<footer>
+  طارق ♡ دعوة حفل عقد القران
+</footer>
+
+</body>
+</html>
